@@ -1,0 +1,82 @@
+<div class="container">
+    <span style="font-size: 13px" class="text-decoration-none text-black">
+        <a class="text-decoration-none text-black" href="#!/">Trang Chủ</a>
+        <i class="bi bi-caret-right-fill"></i>
+        <a class="text-decoration-none text-black" href="#!/gioHang">Giỏ Hàng</a>
+        <i class="bi bi-caret-right-fill"></i>
+        <a class="text-decoration-none text-black" href="#!/thanhtoan">Thanh Toán</a>
+    </span>
+    <!--  d-flex flex-column align-items-center -->
+    <div class="row p-0">
+        <div class="col-md-8 d-flex flex-column align-items-end">
+            <form ng-submit="thanhtoan()" class="col-md-6 col-sm-12 p-0 w-75">
+                <p class="d-flex flex-column align-items-start fw-semibold fs-5 my-2">Thông tin thanh toán</p>
+                <span class="mt-2 mb-2">Bạn đã có tài khoản?
+                    <a href="#!/dangnhap" class="text-black"> Đăng nhập</a>
+                </span>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3 mt-2">
+                            <label for="name" class="form-label">Họ và tên:</label>
+                            <input ng-model="customer.name" type="text" class="form-control" id="name" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Số điện thoại:</label>
+                            <input ng-model="customer.phone" type="text" class="form-control" id="phone" required />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input ng-model="customer.Email" type="email" class="form-control" id="Email" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Địa chỉ:</label>
+                            <input ng-model="customer.address" type="text" class="form-control" id="address" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" d-flex flex-column align-items-end">
+                        <button ng-click="dathang()" class="btn-dathang border-0 fw-bold text-white">Đặt Hàng</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-md-4 border-line-left">
+            <div class="row py-3 border-thanhtoan" ng-repeat="product in gioHang">
+                <div class="col-md-3">
+                    <a href="#!productdetail/{{product.id}}">
+                        <img class="img-thumbnail" src="{{product.imgSP[0]}}" alt="" /></a>
+                </div>
+                <div class="col-md-5">
+                    <p class="font-size-thanhtoan">{{product.tenSP}}</p>
+                    <span class="color-thanhtoan d-block" style="--data-color: {{product.selectedColor}}"></span>
+                    <span class="font-size-info" ng-if="!!product.selectedSize">{{product.selectedSize}}</span>
+                </div>
+                <div class="col-md-4">
+                    <p class="m-0 font-size-thanhtoan">
+                        {{product.giaSP*(1-product.salePercent) | vietnamCurrency}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-6 d-flex flex-column align-items-start">
+                    <p>Tổng Tiền: </p>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-end ">
+                    <h3 class="fs-6 fw-normal">{{tongTien | vietnamCurrency}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,14 @@
+.btn-gui{
+    border: 0;
+    margin-left: 25%;
+    height: 40px;
+    border-radius: 10px;
+}
+.btn-color{
+    background-color: rgb(74, 74, 74);
+}
+.btn-dangnhap, .btn-dangki{
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+}

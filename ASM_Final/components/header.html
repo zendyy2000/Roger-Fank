@@ -1,0 +1,62 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand ms-3 fw-semibold" href="#!/">
+        <img src="img/theme_hstatic_net-logo.png" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="ms-5">
+          <div class="search-box">
+            <input class="search-input" ng-model="keyword" type="text" placeholder="Type to search.." />
+            <div ng-click="startSearch()" class="search-icon">
+              <i class="bi bi-search"></i>
+            </div>
+            <div ng-click="endSearch()" class="cancel-icon">
+              <i class="bi bi-x-circle-fill"></i>
+            </div>
+            <div class="position-absolute p-2 w-100 search-result" style="background: white">
+              <div ng-if="!(!!keyword)" class="">Tim kiem gi do</div>
+              <a ng-click="endSearch()" href="#!sanphamchitiet/{{product.id}}"
+                class="search-link py-1 text-decoration-none" ng-if="!!keyword"
+                ng-repeat="product in products | filter: {tenSP: keyword} | limitTo : 10:0">{{product.tenSP}}</a>
+            </div>
+          </div>
+        </form>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item fw-semibold fs-5">
+            <a class="nav-link active" ng-class="activeRoute === '/' ? 'custom-text-primary' : ''" aria-current="page"
+              href="#!/">Trang Chủ</a>
+          </li>
+          <li class="nav-item fw-semibold fs-5">
+            <a class="nav-link active" ng-class="activeRoute === '/sanpham' ? 'custom-text-primary' : ''"
+              aria-current="page" href="#!/sanpham/1">Sản Phẩm</a>
+          </li>
+          <li class="nav-item fw-semibold fs-5">
+            <a class="nav-link active" ng-class="activeRoute === '/baiViet' ? 'custom-text-primary' : ''"
+              aria-current="page" href="#!/baiViet">Tin Tức</a>
+          </li>
+          <li class="nav-item fw-semibold fs-5 me-2 ms-2">
+            <a class="nav-link active position-relative" aria-current="page" href="#!/gioHang">
+              <i class="bi bi-cart4"></i>
+              <span class="position-absolute badge custom-bg-primary text-white header-total-cart-number">{{tongSanPham
+                ? tongSanPham : ''}}</span>
+            </a>
+          </li>
+          <li class="nav-item fw-semibold fs-5 me-2 ms-2">
+            <a class="nav-link active" aria-current="page" href="tel:0798821882"><i q
+                class="bi bi-telephone-fill"></i></a>
+          </li>
+          <li class="nav-item fw-semibold fs-5 me-2 ms-2">
+            <a class="nav-link active" aria-current="page" href="#!/dangnhap"><i class="bi bi-person-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

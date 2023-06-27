@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: relative;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  opacity: 0.9;
+}
+.header-total-cart-number {
+  padding: 3px 4px;
+}
+.search-box {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(71, 70, 70, 0.2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box.active {
+  width: 350px;
+}
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box input.active {
+  opacity: 1;
+}
+.search-box input::placeholder {
+  color: #a6a6a6;
+}
+.search-box .search-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: #49494a;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .search-icon.active {
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: #4d4d4f;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: rgb(48, 47, 47);
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .cancel-icon.active {
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.search-box .search-data.active {
+  display: none;
+}
+header.sticky {
+  background: white;
+  opacity: 0.9;
+}
+.sticky #menu a {
+  color: red;
+}
+.nav-link:hover {
+  color: rgb(25, 135, 84) !important;
+}
+.navbar-brand:hover {
+  color: rgb(25, 135, 84) !important;
+}
+@media (max-width: 668px) {
+  .nav-link {
+    text-align: center;
+  }
+}
+.search-style {
+  border: 1px solid rgb(104, 104, 104);
+  transition: transform 0.2s;
+  border-radius: 30px;
+}
+.search-style:focus {
+  width: 300px;
+  transform: scale(1.2);
+}
+.btn-search {
+  border: 2px double black;
+  border-radius: 40px;
+  color: black !important;
+}
+.btn-search:hover {
+  border: 2px double black;
+  color: rgb(244, 5, 161) !important;
+}
+.menu-item:hover {
+  color: rgb(198, 24, 96) !important;
+  color: deeppink;
+}
+
+@-webkit-keyframes my {
+  0% {
+    color: #f8cd0a;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+@-moz-keyframes my {
+  0% {
+    color: #f8cd0a;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+@-o-keyframes my {
+  0% {
+    color: #f8cd0a;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+@keyframes my {
+  0% {
+    color: #f8cd0a;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+.sale {
+  background: #3d3d3d;
+  font-size: 24px;
+  font-weight: bold;
+  -webkit-animation: my 700ms infinite;
+  -moz-animation: my 700ms infinite;
+  -o-animation: my 700ms infinite;
+  animation: my 700ms infinite;
+}
+.border-bottom-5 {
+  width: 200px;
+  border-bottom: 1px solid black;
+}
+
+.countdown {
+  margin: 0;
+  background-color: lightgrey;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+#days {
+  font-size: 33px;
+}
+#hours {
+  font-size: 33px;
+}
+#minutes {
+  font-size: 33px;
+}
+#seconds {
+  font-size: 33px;
+}
+.item-sale-slide {
+  text-decoration: none;
+  background-color: #f8cd0a;
+}
+footer {
+  background-color: rgb(168, 161, 161);
+}
+footer a {
+  text-decoration: none;
+  color: black !important;
+}
+#inputEmail {
+  height: 35px;
+}
+.send-email {
+  margin-left: -35px;
+  padding-left: 5px;
+  border-left: 1px solid black !important;
+}
+.font-item-sale {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.font-item-cu {
+  font-size: 13px;
+}
+.giaGoc {
+  font-size: 12px;
+}
+
+.item-SPnoiBat:hover {
+  box-shadow: 1px 1px 4px rgb(157, 156, 156);
+}
+.button-item {
+  min-width: 130px;
+  min-height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(176, 175, 175);
+  background-color: white;
+  color: rgb(66, 64, 64);
+  font-size: 13px;
+}
+.button-item:focus {
+  background-color: rgb(202, 202, 202);
+  color: rgb(57, 57, 57);
+  border: 2px solid rgb(33, 30, 30);
+}
+.xemallitem {
+  text-decoration: none;
+  color: green;
+}
+.image-banner-hover {
+  position: relative;
+  width: 50%;
+}
+.image__img {
+  display: block;
+  width: 100%;
+}
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.image__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1em;
+  margin-top: 0.25em;
+}
+.search-store {
+  height: 80px;
+  background-color: #d2cfcf;
+}
+.play-roger {
+  width: 600px;
+  height: 300px;
+}
+.bg-body-secondary {
+  background-color: #f1f1f1;
+}
+.inPutLienHe {
+  min-height: 35px;
+  border: 1px solid lightgrey;
+}
+
+.scroll-top-btn {
+  bottom: 0;
+  right: 0;
+}
+.search-result{
+  border-radius: 8px;
+  top: 62px;
+  display: none;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.search-link{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: black;
+}
+
+header{
+  z-index: 999999999999999 !important;
+}

@@ -1,0 +1,107 @@
+.demo-cursor:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.border-img {
+  border: 0.2px solid lightgrey;
+  border-radius: 5px;
+}
+.font-maSP {
+  font-size: 13px;
+}
+.keNgang {
+  border-top: solid green;
+}
+.keNgang1 {
+  border-top: dotted rgb(0, 0, 0);
+}
+.color-sanPham {
+  width: 20%;
+}
+.color-sanPham img {
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.huongDanSize {
+  font-size: 13px;
+}
+.nav-info {
+  border: 1px solid rgb(145, 145, 145);
+  border-radius: 5px;
+}
+.nav-info:focus {
+  border: 1px solid rgb(0, 0, 0);
+}
+.sanPhamTuongTu {
+  transition: transform 0.2s;
+}
+.sanPhamTuongTu:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 1px 1px 1px gray;
+}
+.product-color-span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 4px;
+  background-color: var(--data-color);
+  cursor: pointer;
+}
+
+
+.product-color-span.border-selected {
+  border: 2px solid var(--data-color);
+  border-radius: 50%;
+}
+.product-size {
+  padding: 2px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--custom-primary);
+  color: var(--custom-primary);
+  font-weight: bold;
+  transition: all ease 0.3s;
+}
+.product-size:hover {
+  cursor: pointer;
+  background-color: var(--custom-primary);
+  color: white;
+}
+.product-size.active {
+  background-color: var(--custom-primary);
+  color: white;
+}
+#showmore {
+  height: 500px;
+  overflow: hidden;
+}
+.show-more-btn {
+  justify-content: center;
+  bottom: 0px;
+  padding: 10px 0;
+  color: var(--custom-primary);
+  z-index: 1000;
+  width: 100%;
+  background-image: linear-gradient(white, rgb(245, 245, 245));
+  cursor: pointer;
+}
+.show {
+  height: auto !important;
+}
+.animate {
+  animation: shake 1s ease infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}

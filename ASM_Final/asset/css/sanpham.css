@@ -1,0 +1,52 @@
+
+@-webkit-keyframes my {
+    0% { color: red; } 
+    50% { color: black;  } 
+    100% { color: red;  } 
+}
+@-moz-keyframes my { 
+    0% { color: red;  } 
+    50% { color: black;  }
+    100% { color: red;  } 
+}
+@-o-keyframes my { 
+    0% { color: red; } 
+    50% { color: black; } 
+    100% { color: red;  } 
+}
+@keyframes my { 
+    0% { color: red;  } 
+    50% { color: black;  }
+    100% { color: red;  } 
+} 
+.sanPham {
+        /* background:#3d3d3d; */
+        font-size:24px;
+        font-weight:bold;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite; 
+    -o-animation: my 700ms infinite; 
+    animation: my 700ms infinite;
+}
+.sanPham-boder p{
+    font-size: 18px;
+}
+.canbang{
+    margin-top: 14px;
+}
+.sapXep{
+    width: 100px;
+    height: 40px;
+}
+.sapXep-item{
+    background-color: rgb(238, 238, 238);
+}
+.item-Loc{
+    font-size: 13px;
+}
+.title-khoanGia{
+    background-color: rgb(206, 206, 206);
+}
+.loc-size{
+    font-size: 13px;
+}

@@ -1,0 +1,803 @@
+[
+  {
+    "id": 0,
+    "categoryId": 1,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/loadfer/FK965_CHINH_1.png",
+      "img/loadfer/FK965_CHINH_2.png",
+      "img/loadfer/FK965_CHINH_3.png"
+    ],
+    "tenSP": "Giày Loadfer Cao Cấp FK965",
+    "maSP": "FK965",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#604141",
+      "#000000"
+    ],
+    "giaSP": 1290000,
+    "salePercent": 0.1,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 2,
+    "categoryId": 1,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/loadfer/LF773_CHINH_1.png",
+      "img/loadfer/LF773_CHINH_2.png",
+      "img/loadfer/LF773_CHINH_3.png"
+    ],
+    "tenSP": "Giày Loadfer Da PU  LF773",
+    "maSP": "LF773",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#604141"
+    ],
+    "giaSP": 2935000,
+    "salePercent": 0.3,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 3,
+    "categoryId": 1,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/loadfer/LF776_CHINH_1.png",
+      "img/loadfer/LF776_CHINH_2.png",
+      "img/loadfer/LF776_CHINH_3.png"
+    ],
+    "tenSP": "Giày Mule Cao Cấp LF776",
+    "maSP": "LF776",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 1890000,
+    "salePercent": 0.25,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 4,
+    "categoryId": 1,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/loadfer/penny_LF800_CHINH_1.png",
+      "img/loadfer/penny_LF800_CHINH_2.png",
+      "img/loadfer/penny_LF800_CHINH_3.png"
+    ],
+    "tenSP": "Giày Penny LF800",
+    "maSP": "LF800",
+    "sizeSP": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "mauSP": [
+      "#e0d7bd"
+    ],
+    "giaSP": 2190000,
+    "salePercent": 0.15,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 5,
+    "categoryId": 1,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/loadfer/TASSEL_LOAFER_LF806_CHINH_1.png",
+      "img/loadfer/TASSEL_LOAFER_LF806_CHINH_2.png",
+      "img/loadfer/TASSEL_LOAFER_LF806_CHINH_3.png"
+    ],
+    "tenSP": "GIÀY DA CAO CẤP TASSEL LOAFER LF806",
+    "maSP": "LF806",
+    "sizeSP": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "mauSP": [
+      "#e0d7bd"
+    ],
+    "giaSP": 2190000,
+    "salePercent": 0.15,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 6,
+    "categoryId": 1,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/oxford/GiayOXFORD111CHINH_1.png",
+      "img/oxford/GiayOXFORD111CHINH_2.png",
+      "img/oxford/GiayOXFORD111CHINH_3.png"
+    ],
+    "tenSP": "GIÀY Da Nam Cao cấp oxford OX111",
+    "maSP": "OX111",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#604141"
+    ],
+    "giaSP": 1789000,
+    "salePercent": 0.26,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 7,
+    "categoryId": 1,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/oxford/giayOxfordCaptoeOF108CHINH1.png",
+      "img/oxford/giayOxfordCaptoeOF108CHINH2.png",
+      "img/oxford/giayOxfordCaptoeOF108CHINH3.png"
+    ],
+    "tenSP": "GIÀY Nam cao cấp Oxford Captoe OF108",
+    "maSP": "OF108",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#604141",
+      "#684444"
+    ],
+    "giaSP": 2560000,
+    "salePercent": 0.3,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 8,
+    "categoryId": 1,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/oxford/oxfordOF804_CHINH_1.png",
+      "img/oxford/oxfordOF804_CHINH_2.png",
+      "img/oxford/oxfordOF804_CHINH_3.png"
+    ],
+    "tenSP": "GIÀY Oxford OF804",
+    "maSP": "OF804",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 2560000,
+    "salePercent": 0.3,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 9,
+    "categoryId": 1,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/oxford/OXFORDWINGTI_BROGUEOF771_CHINH_1.png",
+      "img/oxford/OXFORDWINGTI_BROGUEOF771_CHINH_2.png",
+      "img/oxford/OXFORDWINGTI_BROGUEOF771_CHINH_3.png"
+    ],
+    "tenSP": "GIÀY Oxford Dwingti BROGUE OF771",
+    "maSP": "OF771",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#604141"
+    ],
+    "giaSP": 3190000,
+    "salePercent": 0.45,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 10,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/ZIP_BOOTS_BT702_1.png",
+      "img/boot/ZIP_BOOTS_BT702_2.png",
+      "img/boot/ZIP_BOOTS_BT702_3.png",
+      "img/boot/ZIP_BOOTS_BT702_4.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Zip Boots BT702",
+    "maSP": "BT702",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 3390000,
+    "salePercent": 0.35,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 11,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/CHUKKA_BOOTS_BT289_1.png",
+      "img/boot/CHUKKA_BOOTS_BT289_2.png",
+      "img/boot/CHUKKA_BOOTS_BT289_3.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Nam Chukka boots bt289",
+    "maSP": "bt289",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#554646"
+    ],
+    "giaSP": 1990000,
+    "salePercent": 0.1,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 12,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/chelseaBoot_den_1.png",
+      "img/boot/chelseaBoot_den_2.png",
+      "img/boot/chelseaBoot_den_3.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Nam chelseaBoot đen",
+    "maSP": "bt000",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 1990000,
+    "salePercent": 0.1,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 13,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/CHELSEA_BOOTS_BT805_1.png",
+      "img/boot/CHELSEA_BOOTS_BT805_2.png",
+      "img/boot/CHELSEA_BOOTS_BT805_3.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Nam chelseaBoot BT805",
+    "maSP": "BT805",
+    "sizeSP": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#604141"
+    ],
+    "giaSP": 2990000,
+    "salePercent": 0.12,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 14,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/CHELSEA_BOOTS_BT772_1.png",
+      "img/boot/CHELSEA_BOOTS_BT772_2.png",
+      "img/boot/CHELSEA_BOOTS_BT772_3.png",
+      "img/boot/CHELSEA_BOOTS_BT772_4.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Nam chelseaBoot BT772",
+    "maSP": "BT772",
+    "sizeSP": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "mauSP": [
+      "#604141"
+    ],
+    "giaSP": 2790000,
+    "salePercent": 0.2,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 15,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/CHELSEA_BOOTS_BT116_1.png",
+      "img/boot/CHELSEA_BOOTS_BT116_2.png",
+      "img/boot/CHELSEA_BOOTS_BT116_3.png",
+      "img/boot/CHELSEA_BOOTS_BT116_4.png",
+      "img/boot/CHELSEA_BOOTS_BT116_5.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Nam chelseaBoot BT116",
+    "maSP": "BT116",
+    "sizeSP": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#635252"
+    ],
+    "giaSP": 3590000,
+    "salePercent": 0.2,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 16,
+    "categoryId": 1,
+    "childrenCategoryId": 3,
+    "imgSP": [
+      "img/boot/CHELSEA_BOOTS_ BT105_2.png",
+      "img/boot/CHELSEA_BOOTS_ BT105_3.png",
+      "img/boot/CHELSEA_BOOTS_ BT105_4.png"
+    ],
+    "tenSP": "GIÀY Cao Cấp Nam chelseaBoot BT105",
+    "maSP": "BT105",
+    "sizeSP": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "mauSP": [
+      "#635252"
+    ],
+    "giaSP": 2790000,
+    "salePercent": 0.23,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 17,
+    "categoryId": 2,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/capxach/BST_THE_NEW_ERA_CL042_1.png",
+      "img/capxach/BST_THE_NEW_ERA_CL042_2.png",
+      "img/capxach/BST_THE_NEW_ERA_CL042_3.png",
+      "img/capxach/BST_THE_NEW_ERA_CL042_4.png"
+    ],
+    "tenSP": "balo BTS The New era CL042",
+    "maSP": "CL042",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 1790000,
+    "salePercent": 0.05,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 18,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/BST_USSE_CL020_1.png",
+      "img/capxach/BST_USSE_CL020_2.png",
+      "img/capxach/BST_USSE_CL020_3.png"
+    ],
+    "tenSP": "CẶP XÁCH NAM BST USSÉ CL020",
+    "maSP": "CL020",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 1985000,
+    "salePercent": 0.15,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 19,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/CL021_1.png",
+      "img/capxach/CL021_2.png",
+      "img/capxach/CL021_3.png",
+      "img/capxach/CL021_4.png"
+    ],
+    "tenSP": "CẶP XÁCH NAM BST USSÉ CL021",
+    "maSP": "CL021",
+    "mauSP": [
+      "#e09a5b"
+    ],
+    "giaSP": 1985000,
+    "salePercent": 0.2,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 20,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/CL022_1.png",
+      "img/capxach/CL022_2.png",
+      "img/capxach/CL022_3.png"
+    ],
+    "tenSP": "CẶP XÁCH NAM BST USSÉ CL022",
+    "maSP": "CL022",
+    "mauSP": [
+      "#a49797"
+    ],
+    "giaSP": 1985000,
+    "salePercent": 0.23,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 21,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/ERA_CL053_2.png",
+      "img/capxach/ERA_CL053_1.png"
+    ],
+    "tenSP": "TÚI ĐEO CHÉO BST THE NEW ERA CL053",
+    "maSP": "CL053",
+    "mauSP": [
+      "#532c22"
+    ],
+    "giaSP": 1579000,
+    "salePercent": 0.3,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 22,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/CL051_1.png",
+      "img/capxach/CL051_2.png",
+      "img/capxach/CL051_3.png"
+    ],
+    "tenSP": "TÚI ĐEO CHÉO BST THE NEW ERA CL051",
+    "maSP": "CL051",
+    "mauSP": [
+      "#1f3668"
+    ],
+    "giaSP": 1679000,
+    "salePercent": 0.05,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 23,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/VELA_CL009_1.png",
+      "img/capxach/VELA_CL009_2.png",
+      "img/capxach/VELA_CL009_3.png"
+    ],
+    "tenSP": "CLUTCH GOLF CẦM TAY NAM BST VÈLA CL009",
+    "maSP": "CL009",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 1579000,
+    "salePercent": 0.05,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 24,
+    "categoryId": 2,
+    "childrenCategoryId": 1,
+    "imgSP": [
+      "img/capxach/CL025_1.png",
+      "img/capxach/CL025_2.png",
+      "img/capxach/CL025_3.png"
+    ],
+    "tenSP": "TÚI XÁCH NAM BST USSÉ CL025",
+    "maSP": "CL025",
+    "mauSP": [
+      "#865215"
+    ],
+    "giaSP": 1579000,
+    "salePercent": 0.05,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 25,
+    "categoryId": 2,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/capxach/DAISY_V003_1.png",
+      "img/capxach/DAISY_V003_2.png",
+      "img/capxach/DAISY_V003_3.png"
+    ],
+    "tenSP": "VÍ CARD HOLDER BST DAISY V003",
+    "maSP": "V003",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 295000,
+    "salePercent": 0.16,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 26,
+    "categoryId": 2,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/capxach/ANGERS_V041_1.png",
+      "img/capxach/ANGERS_V041_2.png",
+      "img/capxach/ANGERS_V041_3.png"
+    ],
+    "tenSP": "VÍ CARD HỘP BST ANGERS V041",
+    "maSP": "V041",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 449000,
+    "salePercent": 0.22,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 27,
+    "categoryId": 2,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/capxach/ANGERS_V070_1.png",
+      "img/capxach/ANGERS_V070_2.png"
+    ],
+    "tenSP": "VÍ DÀI BST ANGERS V070",
+    "maSP": "V070",
+    "mauSP": [
+      "#3f3761",
+      "#000000",
+      "#684444"
+    ],
+    "giaSP": 1290000,
+    "salePercent": 0.49,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 28,
+    "categoryId": 2,
+    "childrenCategoryId": 2,
+    "imgSP": [
+      "img/capxach/ANGERS_V047_1.png",
+      "img/capxach/ANGERS_V047_2.png",
+      "img/capxach/ANGERS_V047_3.png"
+    ],
+    "tenSP": "VÍ PASSPORT BST ANGERS V047s",
+    "maSP": "V047s",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 680000,
+    "salePercent": 0.19,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 29,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB248_1.png",
+      "img/thatlung/RB248_2.png"
+    ],
+    "tenSP": "THẮT LƯNG DA 2 MẶT ĐEN & NÂU 3.5CM - RB248",
+    "maSP": "RB248",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 850000,
+    "salePercent": 0.39,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 30,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB247_1.png",
+      "img/thatlung/RB247_2.png",
+      "img/thatlung/RB247_3.png"
+    ],
+    "tenSP": "THẮT LƯNG DA 2 MẶT ĐEN & XANH 3.0CM - RB247",
+    "maSP": "RB247",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 850000,
+    "salePercent": 0.35,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 31,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB93_1.png",
+      "img/thatlung/RB93_2.png",
+      "img/thatlung/RB93_3.png"
+    ],
+    "tenSP": "THẮT LƯNG DA 2 MẶT ĐEN & XANH 3.0CM - RB93",
+    "maSP": "RB93",
+    "mauSP": [
+      "#070973"
+    ],
+    "giaSP": 800000,
+    "salePercent": 0.35,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 32,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB099_1.png",
+      "img/thatlung/RB099_2.png"
+    ],
+    "tenSP": "THẮT LƯNG DA CAO CẤP 2 MẶT 3.5CM RB099",
+    "maSP": "RB099",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 800000,
+    "salePercent": 0.39,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 33,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB091_1.png",
+      "img/thatlung/RB091_2.png",
+      "img/thatlung/RB091_3.png"
+    ],
+    "tenSP": "THẮT LƯNG DA CAO CẤP 3.0CM RB091",
+    "maSP": "RB091",
+    "mauSP": [
+      "#604141"
+    ],
+    "giaSP": 770000,
+    "salePercent": 0.36,
+    "sale": false,
+    "noibat": true
+  },
+  {
+    "id": 34,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB220_1.png",
+      "img/thatlung/RB220_2.png",
+      "img/thatlung/RB220_3.png"
+    ],
+    "tenSP": "THẮT LƯNG DA CAO CẤP 3.0CM RB220",
+    "maSP": "RB220",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 690000,
+    "salePercent": 0.29,
+    "sale": true,
+    "noibat": true
+  },
+  {
+    "id": 35,
+    "categoryId": 3,
+    "childrenCategoryId": 0,
+    "imgSP": [
+      "img/thatlung/RB240_1.png",
+      "img/thatlung/RB240_2.png",
+      "img/thatlung/RB240_3.png"
+    ],
+    "tenSP": "THẮT LƯNG DA XOAY 2 MẶT ĐEN & NÂU 3.2CM RB240",
+    "maSP": "RB240",
+    "mauSP": [
+      "#000000"
+    ],
+    "giaSP": 870000,
+    "salePercent": 0.37,
+    "sale": true,
+    "noibat": true
+  }
+]

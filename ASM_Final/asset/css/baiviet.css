@@ -1,0 +1,26 @@
+.content{
+    box-shadow: 1px 1px 3px 3px lightgrey;
+}
+.content span {
+    font-size: 14px;
+}
+.img-content{
+    transition: transform 0.3s;
+}
+.img-content:hover{
+    transform: scale(1.05);
+}
+.aside-content-title{
+    font-size: 13px;
+}
+.aside-content-Date{
+    font-size: 12px;
+}
+.aside-content{
+    box-shadow: 0.5px 0.5px 2px 2px lightgrey;
+    transition: transform 0.3s;
+}
+.aside-content:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

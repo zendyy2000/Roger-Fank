@@ -1,0 +1,24 @@
+.home-arrow {
+  top: 50%;
+  color: black;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  transform: translateY(-50%);
+}
+.home-arrow:hover {
+  background-color: black;
+  color: white;
+}
+.home-next-arrow {
+  right: 10px;
+}
+.home-prev-arrow {
+  left: -10px;
+}

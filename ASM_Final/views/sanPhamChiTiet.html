@@ -1,0 +1,466 @@
+<div class="container">
+  <span style="font-size: 13px" class="text-decoration-none text-black">
+    <a class="text-decoration-none text-black" href="#!/">Trang Chủ</a>
+    <i class="bi bi-caret-right-fill"></i>
+    <a class="text-decoration-none text-black" href="#!sanpham/1">Sản Phẩm</a>
+    <i class="bi bi-caret-right-fill"></i>
+    <a class="text-decoration-none text-black">Chi Tiết Sản Phẩm</a>
+  </span>
+  <!-- Full-width images with number text -->
+  <div class="row position-relative">
+    <div class="col-md-1 mt-5">
+      <img
+        ng-repeat="img in product.imgSP"
+        class="demo-cursor mb-2 img-thumbnail"
+        src="{{img}}"
+        ng-click="setImage(img)"
+        alt="{{product.tenSP}}"
+      />
+    </div>
+
+    <div class="col-md-6 col-11 mt-5 ms-2">
+      <img style="width: 95%" src="{{image}}" />
+    </div>
+
+    <div class="col-md-4 bg-white mt-5 ps-5">
+      <div>
+        <p class="fs-5 fw-bold">{{product.tenSP}}</p>
+        <p class="font-maSP">Mã SP: {{product.maSP}}</p>
+        <p class="d-flex flex-wrap">
+          <strong class="fs-2 custom-text-primary"
+            >{{product.giaSP * (1-product.salePercent) |
+            vietnamCurrency}}</strong
+          >
+          <del class="ms-2"> {{product.giaSP | vietnamCurrency}} </del>
+        </p>
+      </div>
+      <span
+        >Hoặc
+        <span class="fw-bold"
+          >trả trước {{(product.giaSP * (1-product.salePercent))/3 |
+          vietnamCurrency}} x3 kỳ
+        </span>
+        với
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <span class="text-success fw-bold fs-6 text-decoration-underline"
+            >Fundiin</span
+          >
+          <span class="text-decoration-underline"> Tìm Hiểu Thêm (?)</span>
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img width="100%" src="img/funding.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+      <br />
+      <div class="keNgang pb-2"></div>
+      <span class="text-secondary fw-bold">
+        Giảm đến <span class="text-danger fw-bold">60K</span>
+        <span>cho ĐH từ 100K khi thanh toán qua</span>
+        <span class="text-success fw-bold">Funding</span>
+      </span>
+      <div class="my-2">
+        <div class="mb-1 fw-semibold">Màu:</div>
+        <div class="d-flex flex-wrap">
+          <span
+            class="product-color-span me-2"
+            ng-repeat="color in product.mauSP"
+            ng-class="selectedColor === color ? 'border-selected' : ''"
+            ng-click="selectColor(color)"
+            style="--data-color: {{color}}"
+          ></span>
+        </div>
+      </div>
+      <div class="mb-2">
+        <div ng-if="sizes.length>0" class="mb-1 fw-semibold">Size:</div>
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal1"
+          ng-if="sizes.length > 0"
+        >
+          <span class="mt-3 fs-5 text-uppercase fw-bold pe-2">size</span>
+          <span class="text-decoration-underline huongDanSize"
+            >Hướng dẫn tính size giày</span
+          >
+        </button>
+        <div class="d-flex flex-wrap">
+          <span
+            ng-class="selectedSize === size ? 'active' :''"
+            ng-click="selectSize(size)"
+            class="product-size me-2 mt-2"
+            ng-repeat="size in sizes"
+            >{{size}}</span
+          >
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade modal-xl"
+          id="exampleModal1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img width="100%" src="img/huongDanSize.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center mt-2">
+        <div
+          ng-click="themSanPhamVaoGioHang(product)"
+          class="col-md-6 col-6 bg-black fw-bold pt-3 pb-2"
+        >
+          <p class="text-capitalize text-white">thêm vào giỏ</p>
+        </div>
+        <a
+          ng-click="themSanPhamVaoGioHang(product)"
+          class="col-md-6 col-6 bg-success pt-3 pb-2"
+          href="#!/thanhtoan"
+        >
+          <button
+            class="bg-success fw-bold text-capitalize text-white border-0"
+          >
+            Mua ngay
+          </button>
+        </a>
+      </div>
+      <div class="product-hotline mt-2">
+        <p class="text-uppercase fs-6 text-success fw-bold">
+          Gọi để mua hàng nhanh hơn
+        </p>
+        <a
+          class="text-decoration-none text-black fs-5 fw-bold"
+          href="tel:0798821882"
+          >0798821882</a
+        >
+        <span class="small"> (9h00 : 22h00) </span>
+        <p class="mt-2 fs-6 text-success fw-bold">GIAO HÀNG TỪ 1 - 3 NGÀY</p>
+        <span class="fw-bold">
+          <i class="bi bi-cart-check pe-2"></i>Giao hàng miễn phí</span
+        ><span> (Sản phẩm trên 500k)</span>
+        <br />
+        <span class="fw-bold">
+          <i class="bi bi-clock-history pe-2"></i>Đổi trả dễ dàng</span
+        >
+        (07 ngày)
+        <br />
+        <span class="fw-bold"
+          ><i class="bi bi-wallet2 pe-2"></i>Thanh toán</span
+        >
+        (Thanh toán khi nhận hàng)
+        <br />
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-7">
+      <ul class="nav nav-tabs border-0">
+        <li class="nav-item nav-info mt-2 ms-2">
+          <a class="nav-link active" data-bs-toggle="tab" href="#mota"
+            >Mô Tả Sản Phẩm</a
+          >
+        </li>
+        <li class="nav-item nav-info mt-2 ms-2">
+          <a class="nav-link" data-bs-toggle="tab" href="#thongtin">
+            Thông tin sản phẩm</a
+          >
+        </li>
+        <li class="nav-item nav-info mt-2 ms-2">
+          <a class="nav-link" data-bs-toggle="tab" href="#baoquan">
+            Hướng dẫn bảo quản</a
+          >
+        </li>
+        <li class="nav-item nav-info mt-2 ms-2">
+          <a class="nav-link" data-bs-toggle="tab" href="#video"
+            >Video Sản Phẩm</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="mota">
+          <div class="product-description">
+            <div id="showmore" class="container position-relative">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_1.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_2.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_4.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_5.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_6.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_7.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_8.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_9.png"
+                  alt=""
+                />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/rogerRanger&giayOXFORDCAPTOEOF108_10.png"
+                  alt=""
+                />
+                <img class="pt-2" width="80%" src="img/dongGoi.png" alt="" />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/dongGoi&vanChuyen.png"
+                  alt=""
+                />
+                <img class="pt-2" width="80%" src="img/feedback.png" alt="" />
+                <img
+                  class="pt-2"
+                  width="80%"
+                  src="img/nguoiNoiTiengSuDung.png"
+                  alt=""
+                />
+              </div>
+              <div class="d-flex position-absolute show-more-btn">
+                <div
+                  ng-if="!isShowMore"
+                  class="d-flex justify-content-center animate"
+                  ng-click="showMoreDescription()"
+                >
+                  <div class="">Xem thêm</div>
+                  <i class="bi bi-chevron-double-down"></i>
+                </div>
+
+                <div
+                  ng-if="isShowMore"
+                  class="d-flex justify-content-center animate"
+                  ng-click="showMoreDescription()"
+                >
+                  <div class="">Rút gọn</div>
+                  <i class="bi bi-chevron-double-up"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="thongtin">
+          <div class="row border-0 g-0 rounded shadow-sm">
+            <div class="col p-4">
+              <p>THÔNG SỐ SẢN PHẨM</p>
+              <ul>
+                <li>Chất liệu da bể mặt: Bò non ( bê ) nhập khẩu Châu Âu</li>
+                <li>Chất liệu da lót trong: Bò non ( bê ) nhập khẩu Châu Âu</li>
+                <li>Độ cao: 2.8cm</li>
+                <li>Đế giày: Cao su chống mòn, Made in England</li>
+                <li>
+                  Gót giày: Cao su chống mòn, vân chống trơn, Made in Japan
+                </li>
+                <li>Khâu đế: Cấu trúc Blake</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="baoquan">
+          <div class="row border-0 g-0 rounded shadow-sm">
+            <div class="col p-4">
+              <p class="fw-bold fs-6 text-capitalize">Hướng dẫn bảo quản</p>
+              <h6 class="text-secondary">Khử mùi bên trong giày</h6>
+              Mang giày suốt cả ngày dài đôi khi sẽ bị mồ hôi chân gây ẩm ướt,
+              mùi hôi. Bạn hãy đặt túi đựng viên chống ẩm vào bên trong giày để
+              hút ẩm và rắc phấn rôm (có thể thay bằng cách đặt vào bên trong
+              giày gói trà túi lọc chưa qua sử dụng) để khử mùi, giúp giày luôn
+              khô thoáng. Để hạn chế mùi hôi và sự ẩm ướt cho giày, hãy chọn vớ
+              chân loại tốt, có khả năng thấm hút cao. Ngoài ra, dùng các loại
+              lót giày khử mùi cũng là một phương pháp tốt.
+              <br />
+              <h6 class="text-secondary">Làm mềm giày da</h6>
+
+              Giày da để quá lâu không được sử dụng, đôi khi sẽ bị co cứng lại,
+              dễ gây cảm giác đau chân khi dùng. Để làm mềm giày, đối với giày
+              da, si, bạn có thể thoa một lớp cream lên giày, để một vài tiếng,
+              giày sẽ mềm trở lại. Đối với các loại giày da lộn, bạn có thể dùng
+              vải mềm ẩm lau qua toàn bộ giày, để qua đêm, da giày sẽ mềm hơn
+              hẳn. Để da giày được bền lâu, bạn nhớ hạn chế làm ướt giày. Khi
+              giày bị ướt, không nên hơ bằng lửa, phơi nắng hoặc dùng máy sấy
+              nóng, sẽ làm giày bị cứng, co lại hoặc hỏng bề mặt da. Hãy dùng
+              giấy khô vò lại đặt vào trong giày để hút ẩm, phơi giày ở nơi râm
+              mát. Sau khi khô, với giày da thì nên thoa cream, đánh si để da
+              mềm và bóng đẹp trở lại.
+
+              <h6 class="text-secondary">Bảo quản giày khi không sử dụng</h6>
+
+              Khi bạn mua giày tại Roger, giày sẽ được đặt trong một hộp giày
+              kèm với tem chống ẩm. Khi sử dụng giày, bạn đừng vội vứt hộp đi mà
+              hãy cất lại để dành. Khi không sử dụng, hãy nhét một ít giấy vụn
+              vào bên trong giày để giữ cho dáng giày luôn chuẩn, đẹp. Sau đó
+              đặt giày vào hộp bảo quản cùng túi hút ẩm. Khi cần mang ra sử
+              dụng, hãy áp dụng những cách làm mềm giày da bên trên, như vậy đôi
+              giày của bạn sẽ luôn bền đẹp như mới.
+
+              <h6 class="text-secondary">
+                Mô tả chi tiết từng phần trên 1 đôi giày loafer
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="video">
+          <div class="row border-0 g-0 rounded shadow-sm">
+            <div class="col p-4">
+              <p>Video đang được xây dựng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="fs-3 fw-normal text-center">Sản Phẩm Tương Tự</div>
+      <div class="mt-2 mb-4 keNgang1"></div>
+
+      <div class="container mt-5 position-relative">
+        <div class="filtering position-relative">
+          <div
+            ng-repeat="product in sameProduct | limitTo: 6:0"
+            class="wap-items-ss brbox d-flex flex-column align-items-center product-item-wrapper"
+          >
+            <a href="#!sanphamchitiet/{{product.id}}"
+              ><img alt="" class="img-fluid" src="{{product.imgSP[0]}}"
+            /></a>
+            <div class="textleft">
+              <div style="margin-top: 10px">{{product.tenSP}}</div>
+              <p>
+                {{product.giaSP * (1-product.salePercent) | vietnamCurrency}}
+                <del class="ms-2"> {{product.giaSP | vietnamCurrency}} </del>
+              </p>
+            </div>
+            <i class="bi bi-eye-fill eye-icon fs-3 text-center"></i>
+            <i
+              ng-click="moHopThoaiThemSanPham(product)"
+              class="bi bi-bag-plus-fill cart-icon fs-3 text-center"
+            ></i>
+          </div>
+        </div>
+        <div class="home-arrow home-next-arrow position-absolute">
+          <i class="bi bi-chevron-compact-right fs-4"></i>
+        </div>
+        <div class="home-arrow home-prev-arrow position-absolute">
+          <i class="bi bi-chevron-compact-left fs-4"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(".filtering").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      speed: 400,
+      prevArrow: $(".home-prev-arrow"),
+      nextArrow: $(".home-next-arrow"),
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+    var filtered = false;
+    $(".js-filter").on("click", function () {
+      if (filtered === false) {
+        $(".filtering").slick("slickFilter", ":even");
+        $(this).text("Unfilter Slides");
+        filtered = true;
+      } else {
+        $(".filtering").slick("slickUnfilter");
+        $(this).text("Filter Slides");
+        filtered = false;
+      }
+    });
+  });
+</script>

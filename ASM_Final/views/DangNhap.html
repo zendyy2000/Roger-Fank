@@ -1,0 +1,107 @@
+<div class="container mt-5 mb-5">
+    <span style=" font-size: 13px;" class="text-decoration-none text-black">
+        <a class="text-decoration-none text-black" href="#!/">Trang Chủ</a>
+        <i class="bi bi-caret-right-fill"></i>
+        <a class="text-decoration-none text-black" href="#!/dangnhap">Đăng Nhập</a>
+    </span>
+    <div class="row flex-column align-items-center">
+        <h3 class="text-center">Đăng Nhập</h3>
+        <form class="col-md-5">
+            <div class="w-100 mb-3">
+                <label for="exampleInputEmail1" class="form-label ">Email</label>
+                <input required type="email" class="form-control" id="exampleInputEmail1"
+                    placeholder="Vui Lòng Nhập Email..." aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+                <input required type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Ghi Nhớ</label>
+            </div>
+            <div class="row d-flex flex-column align-items-center">
+                <button type="submit" class=" btn-color text-white btn-dangnhap border-0">Đăng
+                    Nhập</button>
+            </div>
+        </form>
+        <div class="text-center mt-2">
+            <h5><a href="#!/" class="text-decoration-none text-black fs-6 fw-bold text-center">Trở về</a></h3>
+                <button type="button" class="border-0 fw-bold text-black bg-white mt-1 fs-6 text-center"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalDangKi">
+                    Đăng Kí
+                </button>
+                <br>
+                <button type="button" class="border-0 fw-bold text-black bg-white mt-1 fs-6 text-center"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalQuenMatKhau">
+                    Quên Mật Khẩu
+                </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalDangKi" tabindex="-1" aria-labelledby="exampleModalDangKiLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title  text-center fs-5" id="exampleModalLabel">Đăng Kí</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="container row d-flex flex-column align-items-center">
+                        <form class="col-md-5 w-75 mt-3 mb-4">
+                            <div class="w-100 mb-3">
+                                <label for="Name" class="form-label ">Tên</label>
+                                <input type="text" class="form-control" id="Name" placeholder="Họ & Tên"
+                                    aria-describedby="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword2" class="form-label">Nhập Lại Mật Khẩu</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2">
+                            </div>
+                            <div class="row d-flex flex-column align-items-center">
+                                <button type="submit" class="btn-dangki btn-color text-white w-75">Đăng Kí</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalQuenMatKhau" tabindex="-1"
+            aria-labelledby="exampleModalQuenMatKhauLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quên Mật Khẩu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-5">
+                        <div class="flex-column align-items-center">
+                            <div class="text-center">
+                                <h4>CÀI ĐẶT LẠI MẬT KHẨU</h4>
+                                <p>Mật khẩu mới sẽ được gửi về email của bạn.</p>
+                            </div>
+                            <form>
+                                <input type="text" class="form-control" id="Name" placeholder="Email..."
+                                    aria-describedby="Name">
+                                <button class="w-50 btn-color text-white btn-gui mt-3">Gửi</button>
+                                <br>
+                            </form>
+                            <div class="text-center mt-2 mb-4">
+                                <a class="text-decoration-none fw-normal text-black" href="#!/dangnhap">Bỏ Qua</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

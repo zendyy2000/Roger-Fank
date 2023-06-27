@@ -1,0 +1,114 @@
+<div class="container">
+  <marquee class="sanPham" scrollamount="10" behavior="" direction="">
+    <div class="sanPham-boder ps-5 pe-5">
+      <h3>Roger & Fank</h3>
+      <p class="text-capitalize">
+        luôn luôn cập nhật những sản phẩm và giá mới nhất
+      </p>
+    </div>
+  </marquee>
+
+  <div class="row d-flex justify-content-center">
+    <div
+      ng-repeat="cate in categories"
+      class="d-flex flex-column align-items-center justify-content-between col-3 cursor-pointer"
+      ng-click="setActiveCategory(cate)"
+    >
+      <img src="{{cate.img}}" alt="" />
+
+      <button
+        class="w-100 bg-white border-0 fw-normal text-secondary fs-6"
+        ng-class="activeCategory.id === cate.id ? 'custom-text-primary fw-semibold':''"
+      >
+        {{cate.name}}
+      </button>
+    </div>
+  </div>
+  <hr />
+  <div class="row d-flex justify-content-end mb-5 mt-3">
+    <!-- sản Phẩm -->
+    <div class="col-md-9 col-sm-12 order-1">
+      <div class="w-100 d-flex justify-content-start justify-content-md-end">
+        <select
+          class="sapXep ps-2 w-25"
+          ng-options="option.name for option in sortOptions"
+          ng-model="selectedOption"
+          name="SortBy"
+          id="SortBy"
+          ng-change="handleSort()"
+        ></select>
+      </div>
+      <div class="row g-2">
+        <div
+          class="col-md-4 col-sm-12 col-lg-3 p-2 hover-shadow product-item-wrapper"
+          ng-repeat="product in products | limitTo: limit: begin"
+        >
+          <a
+            class="text-decoration-none text-black cursor-pointer"
+            href="#!/sanphamchitiet/{{product.id}}"
+          >
+            <div class="wap-ss-img pt-2">
+              <img class="img-fluid" src="{{product.imgSP[0]}}" alt="" />
+            </div>
+            <h6 class="me-5">{{product.tenSP}}</h6>
+            <p>
+              {{product.giaSP * (1-product.salePercent) | vietnamCurrency}}
+              <del class="ms-2"> {{product.giaSP | vietnamCurrency}} </del>
+            </p>
+          </a>
+          <i class="bi bi-eye-fill eye-icon fs-3 text-center"></i>
+          <i
+            ng-click="moHopThoaiThemSanPham(product)"
+            class="bi bi-bag-plus-fill cart-icon fs-3 text-center"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-12 order-md-1 mb-2">
+      <ul class="list-group">
+        <h5 class="p-2 title-khoanGia">Khoảng Giá</h5>
+        <li ng-repeat="item in filterPrices" class="list-group-item item-Loc">
+          <input
+            class="form-check-input me-1"
+            type="checkbox"
+            value=""
+            id="firstCheckbox"
+            ng-click="selectPrice(item)"
+            ng-checked="selectedPrices.includes(item)"
+          />
+          <label class="form-check-label" for="firstCheckbox"
+            >{{item.min | vietnamCurrency}} - {{item.max |
+            vietnamCurrency}}</label
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Phân trang -->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center m-0 mt-5">
+      <li
+        ng-click="prevPage()"
+        class="page-item"
+        ng-class="currentPage === 1 ? 'disabled' : ''"
+      >
+        <a class="page-link">Previous</a>
+      </li>
+      <li
+        class="page-item"
+        ng-click="changePage(i)"
+        ng-repeat="i in getTotalPage ()"
+        ng-class="i === currentPage ? 'active' : ''"
+      >
+        <a class="page-link">{{i}}</a>
+      </li>
+      <li
+        class="page-item"
+        ng-click="nextPage()"
+        ng-class="currentPage === getTotalPage().length ? 'disabled' : ''"
+      >
+        <a class="page-link">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

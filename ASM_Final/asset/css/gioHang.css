@@ -1,0 +1,30 @@
+.soLuong {
+  background-color: rgb(242, 242, 242);
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.btn-thanhToan {
+  height: 40px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+.btn-thanhToan:hover {
+  background-color: lightgray;
+  color: black;
+}
+.empty-cart-text {
+  transform: translate(10%, 0);
+}
+@media (min-width: 992px) {
+  .empty-cart-text {
+    transform: translate(10%, -120%);
+  }
+}
+.btn-dathang{
+  background-color: #338dbc;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+}

@@ -1,0 +1,23 @@
+.font-size-thanhtoan{
+    font-size: 14px;
+}
+.font-size-info{
+    font-size: 12px;
+}
+.border-line-left{
+    border-left: 1px solid gray;
+}
+.color-thanhtoan{
+    width: 15px;
+    height: 15px;
+    margin-top: -10px;
+    border-radius: 50%;
+    background-color: var(--data-color);
+  }
+  .border-thanhtoan{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(239, 239, 239);
+  box-shadow: rgba(87, 234, 231, 0.15) 0px 7px 29px 0px;
+
+  }

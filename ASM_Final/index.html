@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASM</title>
+    <link rel="stylesheet" href="icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="libs/slick/slick.css" />
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/jquery-3.6.3.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body ng-app="app">
+    <div ng-include="'components/header.html'"></div>
+    <div ng-view></div>
+    <div ng-include="'components/footer.html'"></div>
+
+    <button
+      class="btn position-fixed scroll-top-btn d-none"
+      id="btn-scroll-top"
+    >
+      <i class="bi bi-file-arrow-up-fill fs-1"></i>
+    </button>
+    <!-- Thong bao them san pham thanh cong -->
+    <div
+      class="position-fixed top-0 start-50 translate-middle-x"
+      style="z-index: 9999999999999999999999"
+    >
+      <div
+        id="themSanPhamThanhCong"
+        class="toast hide top-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header d-flex justify-content-between">
+          <span class="text-primary fw-semibold">Thông Báo</span>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body text-success fw-semibold">
+          <i class="bi bi-check-circle me-2"></i>
+          Thêm sản phẩm thành công !!
+        </div>
+      </div>
+    </div>
+    <!-- Thong bao loi -->
+
+    <!-- Modal Them San Pham-->
+    <div
+      class="modal fade modal-xl"
+      id="AddToCartModal"
+      tabindex="-1"
+      aria-labelledby="AddToCartModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable"
+        style="display: block"
+        aria-label="true"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="AddToCartModalLabel">
+              Thêm sản phẩm
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body scoll-modal">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-lg-6">
+                <img
+                  src="{{selectedProduct.imgSP[0]}}"
+                  class="img-fluid h-75"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-12 col-lg-6 col-sm-12">
+                <h3 class="custom-text-primary mb-2">
+                  {{selectedProduct.tenSP}}
+                </h3>
+                <div class="fs-5 fw-semibold">Giá sản phẩm:</div>
+                <p class="d-flex flex-wrap mb-2">
+                  <strong class="fs-2 custom-text-primary"
+                    >{{selectedProduct.giaSP * (1-selectedProduct.salePercent) |
+                    vietnamCurrency}}</strong
+                  >
+                  <del class="ms-2">
+                    {{selectedProduct.giaSP | vietnamCurrency}}
+                  </del>
+                </p>
+                <div class="fs-5 fw-semibold mb-2">Chọn màu:</div>
+                <div>
+                  <div class="d-flex flex-wrap">
+                    <span
+                      class="product-color-span me-2"
+                      ng-repeat="color in selectedProduct.mauSP"
+                      ng-class="selectedProduct.selectedColor === color ? 'border-selected' : ''"
+                      ng-click="setSelectedColor(color)"
+                      style="--data-color: {{color}}"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  ng-if="!!selectedProduct.selectedSize"
+                  class="fs-5 fw-semibold mb-2"
+                >
+                  Chọn size:
+                </div>
+                <div ng-if="!!selectedProduct.selectedSize">
+                  <div class="d-flex flex-wrap">
+                    <span
+                      ng-class="selectedProduct.selectedSize === size ? 'active' :''"
+                      ng-click="setSelectedSize(size)"
+                      class="product-size me-2 mt-2"
+                      ng-repeat="size in selectedProduct.sizeSP"
+                      >{{size}}</span
+                    >
+                  </div>
+                </div>
+                <div class="mb-4"></div>
+                <div class="row g-0">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="input-group p-0">
+                      <span
+                        ng-click="giamsoluong()"
+                        class="input-group-text"
+                        id="basic-addon1"
+                        >-</span
+                      >
+                      <input
+                        disabled
+                        type="text"
+                        class="form-control text-center"
+                        ng-model="soluong"
+                      />
+                      <span
+                        ng-click="tangsoluong()"
+                        class="input-group-text"
+                        id="basic-addon1"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 ps-2">
+                    <button
+                      ng-click="themSanPhamVaoGioHang(selectedProduct, soluong)"
+                      class="product-size h-100 w-100"
+                    >
+                      Thêm vào giỏ hàng
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="util/showToastMessage.js"></script>
+  <script src="asset/js/scroll.js"></script>
+  <script src="index.js"></script>
+  <script src="controller/homeController.js"></script>
+  <script src="controller/baivietController.js"></script>
+  <script src="controller/gioHangController.js"></script>
+  <script src="controller/sanPhamChiTietController.js"></script>
+  <script src="controller/sanPhamController.js"></script>
+</html>
